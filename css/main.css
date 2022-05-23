@@ -10,7 +10,7 @@
 body {
   /*overflow-x: hidden;*/
   background-color: #ffffff;
-  min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 #header {
@@ -77,13 +77,18 @@ section{
   align-items: center;
 }
 
+#text {
+  display: flex;
+  flex-direction: column;
+}
+
 section h1#intro {
-  position: absolute;
+  /* position: absolute; */
   color: #000000;
   font-size: 60px;
   text-align: center;
   line-height: 1em;
-  transform: translateY(-180px);
+  transform: translateY(-20vh);
   font-weight: bold;
   /*text-shadow: 4px 4px 3px rgba(150, 150, 150, 1);*/
 }
@@ -97,8 +102,9 @@ section h1#intro span {
 
 .intro-desc {
   display: flex;
-  transform: translateY(-80px);
+  transform: translateY(-18vh);
   z-index: -4;
+  justify-content: center;
 }
 
 .intro-desc .dynamic-text {
@@ -119,6 +125,14 @@ section h1#intro span {
   animation:  slide 9s steps(3) infinite;
 }
 
+.dynamic-text li:nth-child(1) {
+  text-align: left;
+}
+
+.dynamic-text li:nth-child(2), .dynamic-text li:nth-child(3) {
+  text-align: center;
+}
+
 @keyframes slide{
   100%{
     top: -135px;
@@ -132,7 +146,7 @@ section h1#intro span {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  /*border-left: 2px solid #FA7D09;*/
+  border-left: 2px solid #FF4301;
   animation: typing 3s steps(13) infinite;
 }
 
@@ -146,6 +160,24 @@ section h1#intro span {
   }
 }
 
+#banner #btn {
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  color: #2F2519;
+  font-size: 20px;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transform: translateY(65vh);
+  z-index: 1;
+}
+
+.disappear {
+  z-index: -2 !important;
+}
+
 section img {
   position: absolute;
   top: 0;
@@ -157,7 +189,7 @@ section img {
 }
 
 section img#sun {
-  transform: translateY(280px);
+  transform: translateY(30vh);
 }
 
 img#sun, img#mountaion-front, img#mountain-back {

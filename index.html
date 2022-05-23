@@ -4,26 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mark Christian Dacles | Portfolio</title>
 
   <!-- Primary Meta Tags -->
-  <title>Mark Christian Dacles | Portfolio</title>
-  <meta name="title" content="Mark Christian Dacles | Portfolio">
+  <title>Portfolio | Mark Christian Dacles</title>
+  <meta name="title" content="Portfolio | Mark Christian Dacles">
   <meta name="description" content="Mark Christian is a highly motivated professional that can utilize his knowledge and skills in Information Technology to take on tasks and different responsibilities. He's willing to learn new things so he can adapt to the world of technology.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mcdacles.github.io/portfolio">
-  <meta property="og:title" content="Mark Christian Dacles | Portfolio">
+  <meta property="og:title" content="Portfolio | Mark Christian Dacles">
   <meta property="og:description" content="Mark Christian is a highly motivated professional that can utilize his knowledge and skills in Information Technology to take on tasks and different responsibilities. He's willing to learn new things so he can adapt to the world of technology.">
-  <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+  <meta property="og:image" content="./images/banner.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://mcdacles.github.io/portfolio">
-  <meta property="twitter:title" content="Mark Christian Dacles | Portfolio">
+  <meta property="twitter:title" content="Portfolio | Mark Christian Dacles">
   <meta property="twitter:description" content="Mark Christian is a highly motivated professional that can utilize his knowledge and skills in Information Technology to take on tasks and different responsibilities. He's willing to learn new things so he can adapt to the world of technology.">
-  <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+  <meta property="twitter:image" content="./images/banner.png">
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -41,15 +40,18 @@
   </header>
   <section id="banner">
     <img src="images/17.png" id="sun" />
-    <h1 id="intro"><span>Hello there, I'm</span><br/>Mark Christian Dacles</h1>
-    <div class="intro-desc">
-      <div class="static-text">a&nbsp;</div>
-      <ul class="dynamic-text">
-        <li>Web Developer</li>
-        <li>XR enthusiast</li>
-        <li>Volunteer</li>
-      </ul>
+    <div id="text" >
+      <h1 id="intro"><span>Hello there, I'm</span><br/>Mark Christian Dacles</h1>
+      <div class="intro-desc">
+        <div class="static-text">a&nbsp;</div>
+        <ul class="dynamic-text">
+          <li>Web Developer</li>
+          <li>XR enthusiast</li>
+          <li>Volunteer</li>
+        </ul>
+      </div>
     </div>
+    <a href="#" id="btn">Know more</a>
     <img src="images/16.png" id="mountain-back" />
     <img src="images/15.png" id="mountain-middle" />
     <img src="images/14.png" id="mountain-front" />
@@ -68,10 +70,18 @@
     <p>Nibh sed pulvinar proin gravida. Auctor augue mauris augue neque gravida. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Erat nam at lectus urna duis convallis. In mollis nunc sed id semper risus in hendrerit gravida. Dui accumsan sit amet nulla facilisi. Viverra nam libero justo laoreet sit amet cursus. Arcu dictum varius duis at consectetur lorem donec. Proin libero nunc consequat interdum varius sit amet. Arcu bibendum at varius vel pharetra vel turpis. Et tortor at risus viverra adipiscing at in. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Sed tempus urna et pharetra pharetra massa massa ultricies. Integer eget aliquet nibh praesent. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Euismod lacinia at quis risus sed. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Pulvinar pellentesque habitant morbi tristique. Placerat orci nulla pellentesque dignissim enim sit.</p>
   </div>
 
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
   <script>
     let sun = document.getElementById('sun');
     let mountainBack = document.getElementById('mountain-back');
     let mountainMiddle = document.getElementById('mountain-middle');
+    let btn = document.getElementById('btn');
 
     window.addEventListener('scroll', function(){
 
@@ -81,13 +91,65 @@
       sun.style.top = value * -0.08 + '%';
       mountainBack.style.top = value * 0.1 + 'px';
       mountainMiddle.style.top = value * 0.08 + 'px';
+      btn.style.top = value + 0.05 + 'px';
 
       // Navigation bar toggle
       let header = document.querySelector('header');
       let windowPosition = window.scrollY > 700
 
       header.classList.toggle('scrolling-active', windowPosition);
+
+      // Make banner button z-index: -2
+      let windowPosition1 = window.scrollY > 0
+      btn.classList.toggle('disappear', windowPosition1);
     })
+  </script>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "105405028852629");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v13.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "105405028852629");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml: true,
+        version: 'v13.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
 </body>
 </html>
