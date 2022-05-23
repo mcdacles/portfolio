@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif, Arial;
+}
+
+body {
+  /*overflow-x: hidden;*/
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: sticky;
+}
+
+#header .logo {
+  color: #2F2519;
+  font-weight: bolder;
+  font-size: 2em;
+  text-decoration: none;
+  margin-top: 7px;
+}
+
+#header .logo img {
+  max-width: 90px;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #2F2519;
+  border-radius: 20px;
+}
+
+#header ul li a:hover, 
+#header ul li a.active {
+  background-color: #FA7D09;
+  color: #2F2519;
+}
+
+.scrolling-active {
+  background-color: #ffffff;
+  transition: background-color .5s ease;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section h1#intro {
+  position: absolute;
+  color: #000000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1em;
+  transform: translateY(-180px);
+  font-weight: bold;
+  /*text-shadow: 4px 4px 3px rgba(150, 150, 150, 1);*/
+}
+
+section h1#intro span {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.intro-desc {
+  display: flex;
+  transform: translateY(-80px);
+  z-index: -4;
+}
+
+.intro-desc .dynamic-text {
+  height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+}
+
+.static-text {
+  font-size: 30px;
+}
+
+.dynamic-text li {
+  list-style: none;
+  font-size: 30px;
+  top: 0;
+  position: relative;
+  animation:  slide 9s steps(3) infinite;
+}
+
+@keyframes slide{
+  100%{
+    top: -135px;
+  }
+}
+
+.dynamic-text li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  /*border-left: 2px solid #FA7D09;*/
+  animation: typing 3s steps(13) infinite;
+}
+
+@keyframes typing{
+  40%,
+  60%{
+    left:  calc(100% + 3.5px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#sun {
+  transform: translateY(280px);
+}
+
+img#sun, img#mountaion-front, img#mountain-back {
+  z-index: -3;
+}
+
+img#mountain-middle{
+  z-index: -2;
+}
+
+div#copy {
+  background-color: #2F2519;
+  padding: 50px 100px;
+}
+
+div#copy h2 {
+  font-size: 5em;
+  color: #ffffff;
+}
+
+div#copy p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
