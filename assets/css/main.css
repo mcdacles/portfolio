@@ -8,22 +8,22 @@
 }
 
 body {
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
 
+/* NAVIGATION BAR */
+
 #header {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 100px;
+  padding: 0px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  position: sticky;
 }
 
 #header .logo {
@@ -58,7 +58,7 @@ body {
 #header ul li a {
   text-decoration: none;
   padding: 6px 15px;
-  color: #2F2519;
+  color: #000000;
   border-radius: 20px;
 }
 
@@ -69,20 +69,27 @@ body {
 #header ul li:nth-child(8) a:hover,
 #header ul li:nth-child(8) a.active {
   background-color: #ffffff;
+  color: #000000;
 }
 
 #header ul li a:hover, 
 #header ul li a.active {
-  background-color: #FA7D09;
-  color: #2F2519;
+  background-color: #6B6E8C;
+  color: #ffffff;
 }
 
 .scrolling-active {
+  position: sticky;
   background-color: #ffffff;
   transition: background-color .5s ease;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(107,110,140,0.2);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(107,110,140,0.2);
+  box-shadow: 0px 5px 5px 0px rgba(107,110,140,0.2);
 }
 
-section{
+/* BANNER */
+
+section#banner{
   position: relative;
   width: 100%;
   height: 100vh;
@@ -91,20 +98,20 @@ section{
   align-items: center;
 }
 
-#text {
-  display: flex;
-  flex-direction: column;
+.banner__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translate(130px, 70px);
 }
 
 section h1#intro {
-  /* position: absolute; */
   color: #000000;
   font-size: 60px;
   text-align: center;
   line-height: 1em;
   transform: translateY(-20vh);
   font-weight: bold;
-  /*text-shadow: 4px 4px 3px rgba(150, 150, 150, 1);*/
 }
 
 section h1#intro span {
@@ -114,24 +121,24 @@ section h1#intro span {
   text-shadow: none;
 }
 
-.intro-desc {
+.intro__desc {
   display: flex;
   transform: translateY(-18vh);
   z-index: -4;
   justify-content: center;
 }
 
-.intro-desc .dynamic-text {
+.intro__desc .dynamic__text {
   height: 45px;
   line-height: 45px;
   overflow: hidden;
 }
 
-.static-text {
+.static__text {
   font-size: 30px;
 }
 
-.dynamic-text li {
+.dynamic__text li {
   list-style: none;
   font-size: 30px;
   top: 0;
@@ -139,11 +146,11 @@ section h1#intro span {
   animation:  slide 9s steps(3) infinite;
 }
 
-.dynamic-text li:nth-child(1) {
+.dynamic__text li:nth-child(1) {
   text-align: left;
 }
 
-.dynamic-text li:nth-child(2), .dynamic-text li:nth-child(3) {
+.dynamic__text li:nth-child(2), .dynamic__text li:nth-child(3) {
   text-align: center;
 }
 
@@ -153,14 +160,14 @@ section h1#intro span {
   }
 }
 
-.dynamic-text li::after {
+.dynamic__text li::after {
   content: '';
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  border-left: 2px solid #FF4301;
+  border-left: 2px solid #6B6E8C;
   animation: typing 3s steps(13) infinite;
 }
 
@@ -174,25 +181,7 @@ section h1#intro span {
   }
 }
 
-#banner #btn {
-  position: absolute;
-  top: 0;
-  background-color: #ffffff;
-  color: #2F2519;
-  font-size: 20px;
-  padding: 10px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transform: translateY(65vh);
-  z-index: 1;
-}
-
-.disappear {
-  z-index: -2 !important;
-}
-
-section img {
+/* section img {
   position: absolute;
   top: 0;
   left: 0;
@@ -200,32 +189,24 @@ section img {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-}
+} */
 
-section img#sun {
-  transform: translateY(30vh);
-}
-
-img#sun, img#mountaion-front, img#mountain-back {
+img#wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -3;
+  /* object-fit: cover; */
+  pointer-events: none;
 }
 
-img#mountain-middle{
-  z-index: -2;
-}
-
-div#copy {
-  background-color: #2F2519;
-  padding: 50px 100px;
-}
-
-div#copy h2 {
-  font-size: 5em;
-  color: #ffffff;
-}
-
-div#copy p {
-  font-size: 1.2em;
-  color: #ffffff;
-  margin-bottom: 20px;
+img#avatar {
+  position: absolute;
+  transform: translateX(15%);
+  left: 0px;
+  bottom: 0;
+  z-index: 1;
+  height: 90vh;
 }
