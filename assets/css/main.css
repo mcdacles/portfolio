@@ -29,6 +29,7 @@ p {
   padding: 10px 30px;
   border: 2px solid #595B83;
   border-radius: 30px;
+  color: #595B83
 }
 
 /* NAVIGATION BAR */
@@ -326,6 +327,7 @@ img#avatar {
   text-decoration: none;
   position: relative;
   padding-left: 50px;
+  color: #595B83
 }
 
 .link::before{
@@ -336,6 +338,26 @@ img#avatar {
   width: 40px;
   height: 2px;
   background-color: #595B83;
+}
+
+/* SKILLS */
+
+#skills{
+  padding-top: 100px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills__container img {
+  width: 100%;
+  max-width: 120px;
+  margin: 20px 30px;
 }
 
 /* TIMELINE */
@@ -448,7 +470,7 @@ img#avatar {
 /* PORTFOLIO */
 
 #portfolio{
-  padding-top: 40px;
+  padding-top: 100px;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -457,52 +479,46 @@ img#avatar {
   align-items: center;
 }
 
-.project {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin: 15px;
-}
-
 .project__card {
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
+  color:#fff;
+  overflow: hidden;
+  margin: 10px;
 }
 
-.project:hover .project__card {
-  transform: rotateY(180deg);
-}
-
-.project__image, .project__links {
+.card__overlay {
   position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
+  background-color: #333456;
+  padding: 15px;
+  -webkit-transform: translateY(83%);
+          transform: translateY(83%);
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.project__image {
-  background-color: #333456;
-  color: #ffffff;
+.project__card:hover .card__overlay {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.project__links {
-  background-color: #333456;
-  color: #ffffff;
-  transform: rotateY(180deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card__links {
+  text-align: center;
 }
 
-.project__links a {
+.card__links a {
   color: #ffffff;
-  font-size: 36px;
+  font-size: 26px;
   margin: 0px 10px;
 }
