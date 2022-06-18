@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: auto;
   background-color: #ffffff;
 }
 
@@ -432,6 +432,16 @@ img#avatar {
   margin: 0 auto;
 }
 
+#skills h2 {
+  font-size: 32px;
+  color: #000C24;
+  margin-bottom: 20px;
+}
+
+#skills h2 span {
+  color: #333456;
+}
+
 .skills__container {
   display: flex;
   flex-wrap: wrap;
@@ -450,9 +460,12 @@ img#avatar {
 
 /* TIMELINE */
 
-.timeline__container {
+.timeline {
   padding-top: 100px;
-  width: 80%;
+}
+
+.timeline__container {
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -482,6 +495,13 @@ img#avatar {
   font-size: 16px;
 }
 
+.timeline__content span {
+  font-family: 'Open Sans', sans-serif, Arial;
+  font-size: 14px;
+  font-weight: 100;
+  font-style: italic;
+}
+
 .timeline__content h3 {
   font-family: 'Open Sans', sans-serif, Arial;
   font-size: 14px;
@@ -495,7 +515,7 @@ img#avatar {
     background: #D9D9D9;
     position: absolute;
     left: 50%;
-    height: 130%;
+    height: 100%;
     width: 2px;
     transform: translateX(-50%);
   }
@@ -557,8 +577,22 @@ img#avatar {
 
 /* PORTFOLIO */
 
-#portfolio{
+#portfolio {
   padding-top: 100px;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 32px;
+  color: #000C24;
+  margin-bottom: 20px;
+}
+
+#portfolio h2 span {
+  color: #333456;
+}
+
+.project__container {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
