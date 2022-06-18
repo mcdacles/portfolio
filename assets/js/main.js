@@ -1,6 +1,22 @@
 let wave = document.getElementById('wave');
 // let btn = document.getElementById('btn');
 
+function SendMail() {
+  var params = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    email: document.getElementById('message').value
+  };
+  emailjs
+    .send('service_279186a', 'template_email_template', params)
+    .then(function () {
+      alert('Message sent!');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    });
+}
+
 window.addEventListener('scroll', function () {
   // Parallax effect
   // let value = window.scrollY;

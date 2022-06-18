@@ -479,6 +479,9 @@ img#avatar {
   color: #ffffff;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
 }
 
 .timeline__container ul li:last-child {
@@ -627,4 +630,74 @@ img#avatar {
     width: 100%;
     height: 100%;
   }
+}
+
+/* CONTACT */
+#contact{
+  padding-top: 100px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+#contact h2 {
+  font-size: 32px;
+  color: #000C24;
+  margin-bottom: 40px;
+}
+
+#contact h2 span {
+  color: #333456;
+}
+
+.contact__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 0px 50px 0px;
+  border-radius: 10px;
+  box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: 10px 13px 20px 0px rgba(0,0,0,0.08);
+}
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__field {
+  text-align: left;
+}
+
+.contact__field span {
+  display: block;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif, Arial;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.contact__field input, .contact__field textarea {
+  width: 400px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif, Arial;
+  padding: 8px;
+  color: #000C24;
+}
+
+.contact__field .btn {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 2px solid #595B83;
+  border-radius: 30px;
+  color: #595B83;
+  width: auto;
+}
+
+.contact__field .btn:hover {
+  cursor: pointer;
 }
