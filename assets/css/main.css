@@ -8,11 +8,13 @@
   font-family: 'Oswald', sans-serif, Arial;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   background-color: #ffffff;
-  scroll-behavior: smooth;
-  height: 100%;
 }
 
 p {
@@ -97,6 +99,10 @@ p {
   color: #ffffff;
 }
 
+.menu, .close {
+  display: none;
+}
+
 .scrolling-active {
   position: sticky;
   background-color: #ffffff;
@@ -106,9 +112,69 @@ p {
   box-shadow: 0px 5px 5px 0px rgba(107,110,140,0.2);
 }
 
+/* @media only screen and (max-width: 900px) {
+  #header {
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+} */
+
+@media only screen and (max-width: 900px)  {
+  #header {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 2;
+  }
+
+  #header:target {
+    transform: translateX(0);
+  }
+
+  #header ul {
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  
+  #header ul li {
+    margin-left: 0px !important;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+
+  .menu .fa, .close .fa {
+    font-size: 2rem !important;
+    color: #333456;
+  }
+
+  .scrolling-active {
+    position: relative;
+  }
+}
+
 /* BANNER */
 
-section#banner{
+#banner{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -117,9 +183,6 @@ section#banner{
 }
 
 .banner__text {
-  position: absolute;
-  left: 0;
-  right: 0;
   transform: translate(130px, 70px);
   text-align: center;
 }
@@ -233,10 +296,25 @@ img#avatar {
   height: 90vh;
 }
 
+@media only screen and (max-width: 900px) {
+  img#avatar {
+    height: auto;
+    width: 40%;
+  }
+
+  img#wave {
+    object-fit: cover;
+  }
+
+  .banner__text {
+    transform: translate(0px, 50px);
+  }
+}
+
 /* ABOUT */
 
 #about{
-  padding-top: 40px;
+  padding-top: 100px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -268,7 +346,6 @@ img#avatar {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-left: 50px;
 }
 
 .mbti__name {
@@ -300,6 +377,7 @@ img#avatar {
   padding: 10px 10px 20px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  min-width: 135px;
 }
 
 .mbti__property:hover {
@@ -340,6 +418,12 @@ img#avatar {
   background-color: #595B83;
 }
 
+@media only screen and (max-width: 700px) {
+  .about__container {
+    flex-direction: column;
+  }
+}
+
 /* SKILLS */
 
 #skills{
@@ -355,9 +439,13 @@ img#avatar {
 }
 
 .skills__container img {
-  width: 100%;
-  max-width: 120px;
-  margin: 20px 30px;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills__container img {
+    padding: 40px;
+  }
 }
 
 /* TIMELINE */
@@ -471,7 +559,6 @@ img#avatar {
 
 #portfolio{
   padding-top: 100px;
-  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -479,46 +566,31 @@ img#avatar {
   align-items: center;
 }
 
-.project__card {
-  position: relative;
-  background-color: #fff;
-  color:#fff;
-  overflow: hidden;
-  margin: 10px;
+.project {
+  margin: 30px 0px 50px 30px
 }
 
-.card__overlay {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  background-color: #333456;
-  padding: 15px;
-  -webkit-transform: translateY(83%);
-          transform: translateY(83%);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
-.project__card:hover .card__overlay {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
-.card__links {
-  text-align: center;
-}
-
-.card__links a {
-  color: #ffffff;
+.project .project__card a {
   font-size: 26px;
-  margin: 0px 10px;
+  display: block;
+  text-decoration: none;
+  color: #000C24;
+}
+
+.project__card img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+
+@media only screen and (max-width: 470px) {
+  .project {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .project__card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
