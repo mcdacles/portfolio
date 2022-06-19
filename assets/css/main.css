@@ -704,7 +704,7 @@ img#avatar {
 }
 
 @media only screen and (max-width: 500px) {
-  .contact__field input, .contact__field textarea {
+  .contact__field input[type=text], .contact__field input[type=email], .contact__field textarea {
     width: 100%;
   }
 }
