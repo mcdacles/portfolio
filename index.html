@@ -41,14 +41,14 @@
   <a href="#header" class="menu">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </a>
-  <header id="header">
+  <nav id="header">
     <a href="/" class="logo"><img src="./assets/images/logo.png" alt="DOCS" /></a>
     <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a class="banner active" href="#banner">Home</a></li>
+      <li><a class="about" href="#about">About</a></li>
+      <li><a class="skills" href="#skills">Skills</a></li>
+      <li><a class="portfolio" href="#portfolio">Portfolio</a></li>
+      <li><a class="contact" href="#contact">Contact</a></li>
       <li><a href="https://www.facebook.com/markchristian.dacles/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
       <li><a href="https://github.com/mcdacles" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
       <li><a href="https://www.linkedin.com/in/mark-christian-dacles/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -56,7 +56,7 @@
     <a href="#" class="close">
       <i class="fa fa-times" aria-hidden="true"></i>
     </a>
-  </header>
+  </nav>
   <section id="banner">
     <img src="./assets/images/wave.png" id="wave" />
     <img src="./assets/images/mark-avatar.png" alt="Avatar" id="avatar" />
@@ -64,7 +64,7 @@
       <h1 id="intro"><span>Hello there, I'm</span><br/>Mark Christian Dacles</h1>
       
       <div class="banner__btn">
-        <a href="#" target="_blank" class="banner__btn btn">DOWNLOAD&nbsp;CV</a>
+        <a href="./assets/pdf/DACLES-MARK-CHRISTIAN-CV.pdf" target="_blank" class="banner__btn btn">DOWNLOAD&nbsp;CV</a>
       </div>
       <div class="intro__desc">
         <div class="static__text">a&nbsp;</div>
@@ -86,7 +86,7 @@
 
         <p>I was a DOST-SEI JLSS Scholar and a Polytechnic University of the Philippines Information Technology graduate. I am also a volunteer at Rotaract, an international organization under Rotary International.</p><br/>
 
-        <a href="#" target="_blank" class="btn">DOWNLOAD&nbsp;CV</a><br/><br/><br/>
+        <a href="./assets/pdf/DACLES-MARK-CHRISTIAN-CV.pdf" target="_blank" class="btn">DOWNLOAD&nbsp;CV</a><br/><br/><br/>
       </div>
       <div class="about__mbti">
         <div class="mbti__name">
@@ -133,7 +133,7 @@
                 <h3>Nov 2018 - Mar 2019</h3>
                 <h2>PRIME Philippines</h2>
                 <span>Mobile Developer Intern</span><br/><br/>
-                <p>We participated in developing the company's mobile application using React Native and learned about javascript libraries like Redux. </p>
+                <p>I participated in developing the company's mobile application using React Native and learned about javascript libraries like Redux. </p>
               </div>
             </li>
             <li>
@@ -159,7 +159,7 @@
 
   <section id="skills">
     <div class="skills__container">
-      <h2>THINGS I'VE <span>LEARNED</span> SO FAR</h2>
+      <h2>WHAT I'VE <span>LEARNED</span> SO FAR</h2>
       
       <div class="owl-carousel owl-theme">
         <img class="item" src="./assets/images/logo/react.png" alt="React">
@@ -228,15 +228,15 @@
         <form onsubmit="SendMail()">
           <div class="contact__field">
             <span>Name</span>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
           <div class="contact__field">
             <span>Email</span>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
           </div>
           <div class="contact__field">
             <span>Message</span>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
           </div>
           <div class="contact__field">
             <input type="submit" value="SUBMIT" class="btn" />

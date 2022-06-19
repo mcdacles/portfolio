@@ -1,6 +1,3 @@
-let wave = document.getElementById('wave');
-// let btn = document.getElementById('btn');
-
 function SendMail() {
   var params = {
     name: document.getElementById('name').value,
@@ -17,22 +14,33 @@ function SendMail() {
     });
 }
 
-window.addEventListener('scroll', function () {
-  // Parallax effect
-  // let value = window.scrollY;
+// Navigation Bar active class
+const sections = document.querySelectorAll('section');
+const navigations = document.querySelectorAll('nav ul li a');
 
-  // wave.style.top = value * 0.1 + 'px';
-  // btn.style.top = value + 0.05 + 'px';
-
+window.addEventListener('scroll', () => {
   // Navigation bar toggle
-  let header = document.querySelector('header');
+  let header = document.querySelector('#header');
   let windowPosition = window.scrollY > 500;
 
   header.classList.toggle('scrolling-active', windowPosition);
 
-  // Make banner button z-index: -2
-  // let windowPosition1 = window.scrollY > 300;
-  // btn.classList.toggle('disappear', windowPosition1);
+  let current = '';
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navigations.forEach((navigation) => {
+    navigation.classList.remove('active');
+    if (navigation.classList.contains(current)) {
+      navigation.classList.add('active');
+    }
+  });
 });
 
 // Messenger Plugin
