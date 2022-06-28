@@ -432,7 +432,7 @@ img#avatar {
 /* SKILLS */
 
 #skills {
-  padding-top: 100px;
+  padding: 200px 0px 100px 0px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -467,7 +467,7 @@ img#avatar {
 /* TIMELINE */
 
 .timeline {
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 .timeline__container {
@@ -581,14 +581,14 @@ img#avatar {
     font-size: 14px;
     font-weight: bold;
     position: absolute;
-    top: -30px
+    top: -50px
   }
 }
 
 /* PORTFOLIO */
 
 #portfolio {
-  padding-top: 100px;
+  padding: 100px 0px 100px 0px;
   text-align: center;
 }
 
@@ -623,8 +623,8 @@ img#avatar {
 
 .project__card img {
   object-fit: cover;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
 }
 
 @media only screen and (max-width: 470px) {
@@ -637,6 +637,38 @@ img#avatar {
     width: 100%;
     height: 100%;
   }
+}
+
+/* STRAP */
+#strap {
+  padding: 100px 20px 100px 20px;
+  background-color: #333456;
+}
+
+.strap__container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1280px;
+}
+
+.strap__container h2 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.strap__container p {
+  color: #ffffff;
+}
+
+.strap__container .btn {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 2px solid #ffffff;
+  border-radius: 0px;
+  color: #ffffff;
 }
 
 /* CONTACT */
@@ -699,7 +731,7 @@ img#avatar {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 30px !important;
+  padding: 10px 50px !important;
   border: 2px solid #595B83;
   border-radius: 30px;
   color: #595B83;
@@ -718,4 +750,29 @@ img#avatar {
   .contact__field textarea {
     width: 100%;
   }
+}
+
+footer {
+  background-color: #333456;
+}
+
+.footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.copyright {
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+.copyright a {
+  color: #ffffff;
+  font-size: 25px;
 }

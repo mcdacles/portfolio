@@ -27,6 +27,8 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 	</script>
@@ -38,13 +40,14 @@
 
 </head>
 <body>
+  <div id="home"></div>
   <a href="#header" class="menu">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </a>
   <nav id="header">
     <a href="/" class="logo"><img src="./assets/images/logo.png" alt="DOCS" /></a>
     <ul>
-      <li><a class="banner active" href="#banner">Home</a></li>
+      <li><a class="banner active" href="#home">Home</a></li>
       <li><a class="about" href="#about">About</a></li>
       <li><a class="skills" href="#skills">Skills</a></li>
       <li><a class="portfolio" href="#portfolio">Portfolio</a></li>
@@ -88,7 +91,7 @@
 
         <a href="./assets/pdf/DACLES-MARK-CHRISTIAN-CV.pdf" target="_blank" class="btn">DOWNLOAD&nbsp;CV</a><br/><br/><br/>
       </div>
-      <div class="about__mbti">
+      <div class="about__mbti" data-aos="fade-left">
         <div class="mbti__name">
           <h2>DEFENDER</h2>
           <p>ISFJ-T</p>
@@ -129,7 +132,7 @@
         <div class="timeline__container">
           <ul>
             <li>
-              <div class="timeline__content">
+              <div class="timeline__content" data-aos="flip-down">
                 <h3>Nov 2018 - Mar 2019</h3>
                 <h2>PRIME Philippines</h2>
                 <span>Mobile Developer Intern</span><br/><br/>
@@ -137,7 +140,7 @@
               </div>
             </li>
             <li>
-              <div class="timeline__content">
+              <div class="timeline__content" data-aos="flip-down">
                 <h3>May 2019</h3>
                 <h2>Polytechnic University of the Philippines</h2>
                 <span>Bachelor of Science in Information Technology</span><br/><br/>
@@ -145,7 +148,7 @@
               </div>
             </li>
             <li>
-              <div class="timeline__content">
+              <div class="timeline__content" data-aos="flip-down">
                 <h3>May 2019 - Present</h3>
                 <h2>Straightarrow Corporation</h2>
                 <span>Web Developement Specialist II</span><br/><br/>
@@ -221,6 +224,14 @@
     </div>
   </section>
 
+  <section id="strap">
+    <div class="strap__container">
+      <h2>LET'S TALK ABOUT A PROJECT</h2>
+      <p>If you think that my skills are qualified to make your ideas come to life, dont hesitate to message me and i'll<br/>be greatful to work with you.</p><br/>
+      <a href="#contact" class="btn">DOWNLOAD&nbsp;CV</a>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="contact__container">
       <h2><span>CONNECT</span> WITH ME</h2>
@@ -246,6 +257,23 @@
     </div>
   </section>
 
+  <footer>
+    <div class="footer__container">
+      <p class="copyright">
+      
+        <a href="https://www.facebook.com/markchristian.dacles/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> &nbsp;&nbsp;
+        
+        <a href="https://github.com/mcdacles" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>&nbsp;&nbsp;
+        
+        <a href="https://www.linkedin.com/in/mark-christian-dacles/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+        <br/>
+
+        Copyright &copy; All rights reserved &#124; Made by <strong>Mark Christian Dacles</strong>
+      </p>
+    </div>
+  </footer>
+
   <!-- Messenger Chat Plugin Code -->
   <div id="fb-root"></div>
 
@@ -257,6 +285,12 @@
   <script type="text/javascript" src="./assets/js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 
   <script>
     $(document).ready(function(){
