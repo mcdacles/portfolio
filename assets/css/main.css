@@ -185,7 +185,7 @@ p {
 }
 
 .banner__text {
-  transform: translate(130px, 70px);
+  transform: translate(130px, 60px);
   text-align: center;
 }
 
@@ -641,7 +641,7 @@ img#avatar {
 
 /* STRAP */
 #strap {
-  padding: 100px 20px 100px 20px;
+  padding: 100px 0px 100px 0px;
   background-color: #333456;
 }
 
