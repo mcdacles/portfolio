@@ -331,7 +331,7 @@ img#avatar {
 
 .about__me {
   flex: 2;
-  padding: 0px 10px;
+  padding: 0px 20px;
   text-align: justify;
 }
 
@@ -347,7 +347,7 @@ img#avatar {
 
 .about__mbti {
   flex: 1;
-  padding: 0px 10px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
