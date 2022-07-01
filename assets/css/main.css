@@ -29,9 +29,9 @@ p {
   font-size: 16px;
   font-weight: bold;
   padding: 10px 30px;
-  border: 2px solid #595B83;
+  border: 2px solid #595b83;
   border-radius: 30px;
-  color: #595B83;
+  color: #595b83;
 }
 
 /* NAVIGATION BAR */
@@ -48,7 +48,7 @@ p {
 }
 
 #header .logo {
-  color: #2F2519;
+  color: #2f2519;
   font-weight: bolder;
   font-size: 2em;
   text-decoration: none;
@@ -71,26 +71,26 @@ p {
   font-size: 20px;
 }
 
-#header ul li:nth-child(7),
-#header ul li:nth-child(8) {
+#header ul li:nth-child(8),
+#header ul li:nth-child(9) {
   margin-left: -10px;
 }
 
 #header ul li a {
   text-decoration: none;
   padding: 6px 15px;
-  color: #000C24;
+  color: #000c24;
   border-radius: 20px;
 }
 
-#header ul li:nth-child(6) a:hover,
-#header ul li:nth-child(6) a.active,
 #header ul li:nth-child(7) a:hover,
 #header ul li:nth-child(7) a.active,
 #header ul li:nth-child(8) a:hover,
-#header ul li:nth-child(8) a.active {
+#header ul li:nth-child(8) a.active,
+#header ul li:nth-child(9) a:hover,
+#header ul li:nth-child(9) a.active {
   background-color: #ffffff;
-  color: #000C24;
+  color: #000c24;
 }
 
 #header ul li a:hover,
@@ -107,7 +107,7 @@ p {
 .scrolling-active {
   position: sticky;
   background-color: #ffffff;
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(107, 110, 140, 0.2);
   -moz-box-shadow: 0px 5px 5px 0px rgba(107, 110, 140, 0.2);
   box-shadow: 0px 5px 5px 0px rgba(107, 110, 140, 0.2);
@@ -190,7 +190,7 @@ p {
 }
 
 section h1#intro {
-  color: #000C24;
+  color: #000c24;
   font-size: 54px;
   text-align: center;
   line-height: 1em;
@@ -217,14 +217,14 @@ section h1#intro span {
 }
 
 .intro__desc .dynamic__text {
-  color: #000C24;
+  color: #000c24;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
 }
 
 .static__text {
-  color: #000C24;
+  color: #000c24;
   font-family: 'Open Sans', sans-serif, Arial;
   font-weight: 300;
   font-size: 22px;
@@ -262,12 +262,11 @@ section h1#intro span {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  border-left: 2px solid #595B83;
+  border-left: 2px solid #595b83;
   animation: typing 3s steps(13) infinite;
 }
 
 @keyframes typing {
-
   40%,
   60% {
     left: calc(100% + 3.5px);
@@ -337,7 +336,7 @@ img#avatar {
 
 .about__me h2 {
   font-size: 32px;
-  color: #000C24;
+  color: #000c24;
   margin-bottom: 20px;
 }
 
@@ -378,7 +377,7 @@ img#avatar {
 .mbti__property {
   flex: 1;
   text-align: left;
-  border: 2px solid #D9D9D9;
+  border: 2px solid #d9d9d9;
   padding: 10px 10px 20px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -386,7 +385,7 @@ img#avatar {
 }
 
 .mbti__property:hover {
-  border: 2px solid #595B83;
+  border: 2px solid #595b83;
   transition: 0.3s ease-in-out;
 }
 
@@ -401,7 +400,7 @@ img#avatar {
 .mbti__property span {
   font-size: 26px;
   font-weight: 600;
-  color: #000C24;
+  color: #000c24;
 }
 
 .link {
@@ -410,7 +409,7 @@ img#avatar {
   text-decoration: none;
   position: relative;
   padding-left: 50px;
-  color: #595B83
+  color: #595b83;
 }
 
 .link::before {
@@ -420,7 +419,7 @@ img#avatar {
   top: 11px;
   width: 40px;
   height: 2px;
-  background-color: #595B83;
+  background-color: #595b83;
 }
 
 @media only screen and (max-width: 700px) {
@@ -432,14 +431,14 @@ img#avatar {
 /* SKILLS */
 
 #skills {
-  padding: 200px 0px 100px 0px;
+  padding: 100px 0px 100px 0px;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 #skills h2 {
   font-size: 32px;
-  color: #000C24;
+  color: #000c24;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -465,9 +464,11 @@ img#avatar {
 }
 
 /* TIMELINE */
-
-.timeline {
-  padding-top: 200px;
+#timeline {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .timeline__container {
@@ -522,7 +523,7 @@ img#avatar {
 @media only screen and (min-width: 768px) {
   .timeline__container::before {
     content: '';
-    background: #D9D9D9;
+    background: #d9d9d9;
     position: absolute;
     left: 50%;
     height: 100%;
@@ -557,7 +558,7 @@ img#avatar {
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     border-radius: 50%;
     top: 0;
   }
@@ -577,24 +578,24 @@ img#avatar {
   }
 
   .timeline__content h3 {
-    color: #000C24;
+    color: #000c24;
     font-size: 14px;
     font-weight: bold;
     position: absolute;
-    top: -50px
+    top: -50px;
   }
 }
 
 /* PORTFOLIO */
 
 #portfolio {
-  padding: 100px 0px 100px 0px;
+  padding: 50px 0px 100px 0px;
   text-align: center;
 }
 
 #portfolio h2 {
   font-size: 32px;
-  color: #000C24;
+  color: #000c24;
   margin-bottom: 20px;
 }
 
@@ -611,14 +612,14 @@ img#avatar {
 }
 
 .project {
-  margin: 30px 0px 50px 30px
+  margin: 30px 0px 50px 30px;
 }
 
 .project .project__card a {
   font-size: 26px;
   display: block;
   text-decoration: none;
-  color: #000C24;
+  color: #000c24;
 }
 
 .project__card img {
@@ -681,7 +682,7 @@ img#avatar {
 
 #contact h2 {
   font-size: 32px;
-  color: #000C24;
+  color: #000c24;
   margin-bottom: 40px;
 }
 
@@ -716,25 +717,25 @@ img#avatar {
   font-size: 20px;
 }
 
-.contact__field input[type=text],
-.contact__field input[type=email],
+.contact__field input[type='text'],
+.contact__field input[type='email'],
 .contact__field textarea {
   width: 400px;
   font-size: 20px;
   margin-bottom: 20px;
   font-family: 'Open Sans', sans-serif, Arial;
   padding: 8px;
-  color: #000C24;
+  color: #000c24;
 }
 
-.contact__field input[type=submit] {
+.contact__field input[type='submit'] {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 50px !important;
-  border: 2px solid #595B83;
+  border: 2px solid #595b83;
   border-radius: 30px;
-  color: #595B83;
+  color: #595b83;
   width: auto;
   background-color: #ffffff;
 }
@@ -744,9 +745,8 @@ img#avatar {
 }
 
 @media only screen and (max-width: 500px) {
-
-  .contact__field input[type=text],
-  .contact__field input[type=email],
+  .contact__field input[type='text'],
+  .contact__field input[type='email'],
   .contact__field textarea {
     width: 100%;
   }
