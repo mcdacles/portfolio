@@ -586,6 +586,23 @@ img#avatar {
   }
 }
 
+/* certificates */
+
+#certificates {
+  padding: 50px 0px 100px 0px;
+  text-align: center;
+}
+
+#certificates h2 {
+  font-size: 32px;
+  color: #000c24;
+  margin-bottom: 20px;
+}
+
+#certificates h2 span {
+  color: #333456;
+}
+
 /* PORTFOLIO */
 
 #portfolio {
